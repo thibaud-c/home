@@ -1,0 +1,251 @@
+{
+  "title": "Publications",
+  "colorAccent": "#639B3D", 
+  "items": [
+    {
+      "type": "Book Chapter",
+      "authors": "Chassin T.",
+      "title": "Introduction to Interactive 3D e-Participatory Methods through the Lens of Urban Planning Projects",
+      "journal": "The Handbook of Teaching Qualitative and Mixed Research Methods",
+      "year": 2024,
+      "isbn": "9781032100272",
+      "tags": [
+        {"name": "PPGIS", "color": "#3498db"},
+        {"name": "3D GIS", "color": "#9b59b6"},
+        {"name": "Teaching Methods", "color": "#3498db"}, 
+        {"name": "Qualitative Research", "color": "#9b59b6"}, 
+        {"name": "Mixed Methods", "color": "#27ae60"} 
+      ]
+    },
+    {
+      "type": "Journal Article",
+      "authors": "Chassin T., Ingensand J., Joerin F.",
+      "year": 2023,
+      "title": "Media Coverage of 3D Visual Tools Used in Urban Participatory Planning",
+      "journal": "International Journal of E-Planning Research (IJEPR)",
+      "volume": "12",
+      "issue": "1",
+      "doi": "10.4018/IJEPR.318085",
+      "tags": [
+        {"name": "Media Analysis", "color": "#e74c3c"},
+        {"name": "Urban Participatory Planning", "color": "#27ae60"},
+        {"name": "3D Visualization", "color": "#f1c40f"},
+        {"name": "Civic Tech", "color": "#e67e22"}
+      ]
+    },
+    {
+      "type": "PhD Thesis",
+      "authors": "Chassin T.",
+      "year": 2022,
+      "title": "The Future of Civic Technologies for the Involvement of Citizens in Urban Planning: 3D Urban Participatory e-Planning in the Spotlight",
+      "institution": "EPFL",
+      "location": "Lausanne, CH",
+      "doi": "10.5075/epfl-thesis-10140",
+      "tags": [
+        {"name": "PPGIS", "color": "#3498db"},
+        {"name": "Civic Tech", "color": "#e67e22"},
+        {"name": "Urban Participatory Planning", "color": "#27ae60"},
+        {"name": "3D GIS", "color": "#9b59b6"},
+        {"name": "Digital Technologies", "color": "#f1c40f"}
+      ]
+    },
+    
+    {
+      "type": "Journal Article",
+      "authors": "Chassin T., and Ingensand J.",
+      "year": 2022,
+      "title": "E-guerrilla 3D participation: Approach, implementation, and usability study",
+      "journal": "Frontiers in Virtual Reality",
+      "volume": "3",
+      "pages": "1054252",
+      "doi": "10.3389/frvir.2022.1054252",
+      "tags": [
+        {"name": "PPGIS", "color": "#3498db"},
+        {"name": "3D GIS", "color": "#9b59b6"},
+        {"name": "Usability", "color": "#1abc9c"},
+        {"name": "Virtual Reality", "color": "#d35400"},
+        {"name": "Participation", "color": "#2ecc71"}
+      ]
+    },
+    {
+      "type": "Journal Article",
+      "authors": "Chassin, T., Ingensand, J., Touya, G., and Christophe, S.",
+      "year": 2022,
+      "title": "Experiencing Virtual Geographic Environment in Urban 3D Participatory E-Planning: A User Perspective",
+      "journal": "Landscape and Urban Planning",
+      "volume": "224",
+      "pages": "104432",
+      "doi": "10.1016/j.landurbplan.2022.104432",
+      "tags": [
+        {"name": "VGE", "color": "#8e44ad"},
+        {"name": "User Experience", "color": "#2980b9"},
+        {"name": "3D GIS", "color": "#9b59b6"},
+        {"name": "Urban Participatory Planning", "color": "#27ae60"}
+      ]
+    },
+    {
+      "type": "Journal Article",
+      "authors": "Chassin T., Cherqui A., Ingensand J., and Joerin F.",
+      "year": 2021,
+      "title": "Impact of Digital and Non-Digital Urban Participatory Approaches on Public Access Conditions: An Evaluation Framework",
+      "journal": "ISPRS International Journal of Geo-Information",
+      "volume": "10",
+      "issue": "8",
+      "pages": "563",
+      "doi": "10.3390/ijgi10080563",
+      "tags": [
+        {"name": "Urban Participatory Planning", "color": "#2ecc71"},
+        {"name": "Civic Tech", "color": "#e67e22"},
+        {"name": "Targeted Public", "color": "#e74c3c"},
+        {"name": "Accessibility Framework", "color": "#f39c12"}
+      ]
+    },
+    {
+      "type": "Conference Proceeding",
+      "authors": "Chassin, T., Ingensand, J., Touya, G., and Christophe, S.",
+      "year": 2021,
+      "title": "How do users interact with Virtual Geographic Environments? Users' behavior evaluation in urban participatory planning",
+      "venue": "Proc. Int. Cartogr. Assoc.",
+      "volume": "4",
+      "pages": "19",
+      "doi": "10.5194/ica-proc-4-19-2021",
+      "tags": [
+        {"name": "VGE", "color": "#8e44ad"},
+        {"name": "User Behavior", "color": "#7f8c8d"},
+        {"name": "HCI", "color": "#bdc3c7"},
+        {"name": "3D GIS", "color": "#9b59b6"}
+      ]
+    },
+    {
+      "type": "Conference Proceeding",
+      "authors": "Chassin, T. and Ingensand, J.",
+      "year": 2021,
+      "title": "Are city features influencing the behavior of photographers? An analysis of geo-referenced photos shooting orientation",
+      "venue": "Int. Arch. Photogramm. Remote Sens. Spatial Inf. Sci.",
+      "volume": "XLIII-B4-2021",
+      "pages": "353–359",
+      "doi": "10.5194/isprs-archives-XLIII-B4-2021-353-2021",
+      "tags": [
+        {"name": "Geotagged Photos", "color": "#f1c40f"}, 
+        {"name": "User Behavior", "color": "#7f8c8d"},
+        {"name": "Urban Analysis", "color": "#e67e22"}, 
+        {"name": "GIS", "color": "#27ae60"} 
+      ]
+    },
+    {
+      "type": "Conference Abstract",
+      "authors": "Chassin, T., Ingensand, J., Lotfian, M., Ertz, O., and Joerin, F.",
+      "year": 2020,
+      "title": "Action-research: Assessment of using a 3D participatory platform for reviewing a Swiss city urban development plan",
+      "event": "ECSA Conference",
+      "location": "Trieste, Italy", 
+      "tags": [
+        {"name": "PPGIS", "color": "#3498db"},
+        {"name": "Research-Action", "color": "#16a085"}, 
+        {"name": "3D GIS", "color": "#9b59b6"},
+        {"name": "Urban Planning", "color": "#27ae60"},
+        {"name": "Case Study", "color": "#2980b9"} 
+      ]
+    },
+    {
+      "type": "Conference Proceeding",
+      "authors": "Lotfian, M., Ingensand, J., Ertz, O., Oulevay, S., and Chassin, T.",
+      "year": 2019,
+      "title": "Auto-filtering validation in citizen science biodiversity monitoring: a case study",
+      "venue": "Proc. Int. Cartogr. Assoc.",
+      "volume": "2",
+      "pages": "78",
+      "doi": "10.5194/ica-proc-2-78-2019",
+      "tags": [
+        {"name": "Citizen Science", "color": "#2ecc71"}, 
+        {"name": "Biodiversity", "color": "#27ae60"}, 
+        {"name": "Data Validation", "color": "#e74c3c"}, 
+        {"name": "Filtering", "color": "#f39c12"}, 
+        {"name": "GIS", "color": "#27ae60"}
+      ]
+    },
+    {
+      "type": "Conference Proceeding",
+      "authors": "Chassin, T., Ingensand, J., Lotfian, M., Ertz, O., and Joerin, F.",
+      "year": 2019,
+      "title": "Challenges in creating a 3D participatory platform for urban development",
+      "venue": "Adv. Cartogr. GIScience Int. Cartogr. Assoc.",
+      "volume": "1",
+      "pages": "3",
+      "doi": "10.5194/ica-adv-1-3-2019",
+      "tags": [
+        {"name": "PPGIS", "color": "#3498db"},
+        {"name": "3D GIS", "color": "#9b59b6"},
+        {"name": "Platform Development", "color": "#2c3e50"},
+        {"name": "Urban Development", "color": "#1abc9c"},
+        {"name": "Challenge Identification", "color": "#e74c3c"}
+      ]
+    },
+    {
+      "type": "Conference Proceeding",
+      "authors": "Ingensand, J., Nappez, M., Produit, T., and Chassin, T.",
+      "year": 2018,
+      "title": "Automated reconstruction of 3d buildings in historic city centers from lidar data and 2d building footprints",
+      "venue": "ISPRS Ann. Photogramm. Remote Sens. Spatial Inf. Sci.",
+      "volume": "IV-4/W6",
+      "pages": "19–23",
+      "doi": "10.5194/isprs-annals-IV-4-W6-19-2018",
+      "tags": [
+        {"name": "3D Reconstruction", "color": "#9b59b6"}, 
+        {"name": "LiDAR", "color": "#34495e"}, 
+        {"name": "Building Footprints", "color": "#1abc9c"}, 
+        {"name": "Photogrammetry", "color": "#d35400"},
+        {"name": "Automation", "color": "#f1c40f"} 
+      ]
+    },
+    {
+      "type": "Conference Paper",
+      "authors": "Chassin T., Ingensand J., and Joerin F.",
+      "year": 2018,
+      "title": "Towards the use of a 3D virtual globe to support public participatory decision making",
+      "event": "21st AGILE Conference on Geographic Information Science",
+      "location": "Lund, Sweden",
+      "isbn": "978-3-319-78208-9",
+      "tags": [
+        {"name": "PPGIS", "color": "#3498db"},
+        {"name": "3D Globe", "color": "#2980b9"}, 
+        {"name": "Decision Support", "color": "#16a085"}, 
+        {"name": "AGILE", "color": "#e67e22"},
+        {"name": "Virtual Environment", "color": "#8e44ad"} 
+      ]
+    },
+    {
+      "type": "Preprint",
+      "authors": "Chassin T., Ingensand J., and Joerin F.",
+      "year": 2018,
+      "title": "Towards an open 3D participatory citizen debate",
+      "journal": "PeerJ Preprints",
+      "volume": "6",
+      "pages": "e27207v1",
+      "doi": "10.7287/peerj.preprints.27207v1",
+      "tags": [
+        {"name": "PPGIS", "color": "#3498db"},
+        {"name": "3D GIS", "color": "#9b59b6"},
+        {"name": "Open Science", "color": "#2ecc71"},
+        {"name": "Citizen Debate", "color": "#e74c3c"}
+      ]
+    },
+    {
+      "type": "Conference Proceeding",
+      "authors": "Touya, G. and Chassin, T.",
+      "year": 2018,
+      "title": "RJMCMC based Text Placement to Optimize Label Placement and Quantity",
+      "venue": "Proc. Int. Cartogr. Assoc.",
+      "volume": "1",
+      "pages": "116",
+      "doi": "10.5194/ica-proc-1-116-2018",
+      "tags": [
+        {"name": "Cartography", "color": "#c0392b"}, 
+        {"name": "Label Placement", "color": "#bdc3c7"},
+        {"name": "Toponymy rules", "color": "#bdc3c7"}, 
+        {"name": "Optimization", "color": "#16a085"},
+        {"name": "RJ-MCMC", "color": "#2c3e50"} 
+      ]
+    }
+  ]
+}

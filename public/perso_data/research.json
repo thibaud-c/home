@@ -1,0 +1,44 @@
+{
+  "title": "Research Projects",
+  "colorAccent": "#E7A454",
+  "projects": [
+    {
+      "name": "Seed-stage concept...",
+      "dateStart": null,
+      "dateEnd": null,
+      "funding": null,
+      "goal": null
+    },
+    {
+      "name": "Applied 3D PPGIS in e-participatory planning",
+      "dateStart": "2019",
+      "dateEnd": "2022",
+      "funding": "Funded by host institution: HEIG-VD",
+      "goal": "Explored the use of 3D Public Participation GIS (PPGIS) tools in real-world urban development processes to assess their impact on citizen engagement and institutional decision-making. The research introduced a new evaluation framework and design recommendations to enhance participation through customisation and affordances in interactive 3D environments."
+    },
+    {
+      "name": "Shaping 3D virtual environments following users’ backgrounds and preferences",
+      "dateStart": "2019",
+      "dateEnd": "2020",
+      "funding": "Computers & Geosciences Research Scholarships co-sponsored by Elsevier and the International Association for Mathematical Geosciences (IAMG)",
+      "goal": "Investigated how the level of detail, visual style, and interactivity of virtual geographic environments influence user behaviour in urban representation tasks. The research identified key parameters that reduce cognitive load and improve accuracy when interacting with 3D GIS tools."
+    },
+    {
+      "name": "OGC Innovation Program (TestBed)",
+      "dateStart": "2017",
+      "dateEnd": "2018",
+      "funding": "Funded by host institution: HEIG-VD",
+      "goal": "Contributed to the development of a draft open standard for vector tiling and proposed portrayal ontologies to support richer map symbolisation."
+    }
+  ],
+  "interests": [
+    "Geographic Information Systems (GIS)",
+    "Digital Geographies",
+    "Participatory Methods",
+    "Virtual Geographic Environments (VGEs)",
+    "Public Participatory GIS (PPGIS)",
+    "Urban Planning",
+    "3D Visualization",
+    "Spatial Decision Support Systems"
+  ]
+}

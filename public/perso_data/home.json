@@ -1,0 +1,15 @@
+{
+  "colorAccent": "#6AC1C8",
+  "name": "Thibaud Chassin",
+  "position": "Professor (Assistant) of GIS and Digital Geographies",
+  "location": "Graz, Austria",
+  "flags": "🇦🇹",
+  "socialLinks": [
+    { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/thibaud-chassin", "icon": "linkedin" },
+    { "platform": "GitHub", "url": "https://github.com/thibaud-c", "icon": "github" },
+    { "platform": "Google Scholar", "url": "https://scholar.google.com/citations?user=rf3WWQgAAAAJ&hl=en", "icon": "google-scholar" },
+    { "platform": "ResearchGate", "url": "https://www.researchgate.net/profile/Thibaud-Chassin", "icon": "researchgate" },
+    { "platform": "ORCID", "url": "https://orcid.org/0000-0003-1295-4373", "icon": "orcid" }
+  ],
+  "cvUrl": "Tibo_cv.pdf"
+}

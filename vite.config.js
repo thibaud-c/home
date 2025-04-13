@@ -5,7 +5,7 @@ import { resolve } from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: './', // Changed from '/' to './' for relative paths
+  base: '/home', // Changed from '/' to './' for relative paths
   json: {
     stringify: false // This ensures JSON is imported as an object, not stringified
   },

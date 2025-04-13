@@ -5,7 +5,7 @@ import { resolve } from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/home/',
+  base: '/home/', // Set this to match your GitHub Pages path
   build: {
     assetsDir: 'assets',
     rollupOptions: {

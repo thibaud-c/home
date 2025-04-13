@@ -14,7 +14,7 @@ export function useSectionData(sectionName, defaultData, processData) {
 
   onMounted(async () => {
     try {
-      const response = await fetch(`/perso_data/${sectionName}.json`);
+      const response = await fetch(`./perso_data/${sectionName}.json`);
       if (!response.ok) {
         throw new Error(`Failed to fetch ${sectionName} data: ${response.statusText}`);
       }

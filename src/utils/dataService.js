@@ -7,8 +7,8 @@ export const fetchData = async (section) => {
   
   try {
     // First try to fetch from the modular structure
-    console.log(`Trying modular path: /perso_data/${section}.json`);
-    let response = await fetch(`/perso_data/${section}.json`);
+    console.log(`Trying modular path: ./perso_data/${section}.json`);
+    let response = await fetch(`./perso_data/${section}.json`);
     
     if (response.ok) {
       console.log(`Successfully loaded from modular structure: ${section}`);
@@ -16,8 +16,8 @@ export const fetchData = async (section) => {
     }
     
     // If that fails, try the src/perso_data path
-    console.log(`Trying src path: /src/perso_data/${section}.json`);
-    response = await fetch(`/src/perso_data/${section}.json`);
+    console.log(`Trying src path: ./src/perso_data/${section}.json`);
+    response = await fetch(`./src/perso_data/${section}.json`);
     
     if (response.ok) {
       console.log(`Successfully loaded from src path: ${section}`);
@@ -26,7 +26,7 @@ export const fetchData = async (section) => {
     
     // If that fails, fall back to the original data.json
     console.log(`Section ${section} not found in modular structure, falling back to data.json`);
-    const fullDataResponse = await fetch('/data.json');
+    const fullDataResponse = await fetch('./data.json');
     
     if (!fullDataResponse.ok) {
       console.error('Failed to fetch data.json, status:', fullDataResponse.status);

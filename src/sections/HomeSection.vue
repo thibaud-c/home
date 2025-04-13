@@ -16,7 +16,7 @@ const defaultData = {
 
 // Use the composable to load section data
 const { data: profileData, loading, error } = useSectionData('home', defaultData);
-
+console.log(profileData.value);
 // Three.js variables
 let scene, camera, renderer, globe, controls;
 let animationFrameId = null;
@@ -96,27 +96,35 @@ const initGlobe = () => {
   // Then try to load texture
   const textureLoader = new THREE.TextureLoader();
   
-  // Try different paths for the texture
-  textureLoader.load('./earth-light.jpg', 
+  // Import the texture directly to ensure it's included in the build
+  const earthTextureUrl = './src/assets/earth-light.jpg';
+  
+  console.log(`Attempting to load texture from imported asset: ${earthTextureUrl}`);
+  
+  // Try to load the texture with the correct path
+  textureLoader.load(earthTextureUrl, 
     (texture) => {
       // If texture loads successfully, replace the basic globe
       scene.remove(globe);
       createGlobeWithTexture(texture);
-      console.log('Loaded texture from relative path');
+      console.log('Loaded texture successfully');
     },
-    undefined,
+    (progressEvent) => {
+      console.log(`Loading texture progress: ${progressEvent}`);
+    },
     (error) => {
-      console.warn('Could not load from relative path, trying alternate path:', error);
-      textureLoader.load('./earth-night.jpg', 
+      console.error('Failed to load texture:', error);
+      // Fallback to relative path
+      textureLoader.load('./assets/earth-light.jpg', 
         (texture) => {
           scene.remove(globe);
           createGlobeWithTexture(texture);
-          console.log('Loaded texture from alternate path');
+          console.log('Loaded texture from fallback path');
         },
         undefined,
-        (error) => {
-          console.error('Failed to load texture, using basic globe:', error);
-          // We already have a basic globe, so no need to create another
+        (fallbackError) => {
+          console.error('All texture loading attempts failed:', fallbackError);
+          // Keep the basic globe as fallback
         }
       );
     }

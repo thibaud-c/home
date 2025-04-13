@@ -8,6 +8,8 @@ export default defineConfig({
   base: '/home/', // Set this to match your GitHub Pages path
   build: {
     assetsDir: 'assets',
+    // Increase the warning limit to 600kB
+    chunkSizeWarningLimit: 600,
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),

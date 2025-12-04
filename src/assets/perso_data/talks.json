@@ -1,124 +1,133 @@
 {
   "title": "Talks & Presentations",
-  "colorAccent": "#b3b6da", 
+  "colorAccent": "#b3b6da",
   "items": [
     {
       "type": "Conference Presentation",
-      "invited":false,
+      "invited": false,
+      "title": "Pre-Filled Maps for Proactive e-Participation: A New Paradigm for PPGIS Methodologies",
+      "event": "International Cartographic Conference (ICC)",
+      "location": "Vancouver, Canada 🇨🇦",
+      "date": "2025"
+    },
+    {
+      "type": "Conference Presentation",
+      "invited": false,
       "title": "Guerrilla Participation: An Urban 3D e-Planning Platform for a Simple and Quick Citizen Involvement",
       "event": "6th International Conference in Urban e-Planning",
-      "location": "Online 🌐", 
+      "location": "Online 🌐",
       "date": "2022"
     },
     {
       "type": "Interactive poster session",
-      "invited":false,
+      "invited": false,
       "title": "Are City Features Influencing Public Picture Shooting Behavior?",
       "event": "XXIV ISPRS Congress",
-      "location": "Online 🌐", 
-      "date": "2021"
-    },    {
-      "type": "Conference Presentation",
-      "invited":false,
-      "title": "A Categorization of Applied Participatory 3D Platforms in Urban Design",
-      "event": "5th International Conference in Urban e-Planning",
-      "location": "Online 🌐", 
+      "location": "Online 🌐",
       "date": "2021"
     },
     {
       "type": "Conference Presentation",
-      "invited":false,
+      "invited": false,
+      "title": "A Categorization of Applied Participatory 3D Platforms in Urban Design",
+      "event": "5th International Conference in Urban e-Planning",
+      "location": "Online 🌐",
+      "date": "2021"
+    },
+    {
+      "type": "Conference Presentation",
+      "invited": false,
       "title": "How do users interact with Virtual Geographic Environments?",
       "event": "International Cartographic Conference (ICC)",
-      "location": "Florence, Italy 🇮🇹", 
+      "location": "Florence, Italy 🇮🇹",
       "date": "2021"
     },
     {
       "type": "Webinar",
-      "invited":true,
+      "invited": true,
       "title": "Regards on 3D Participatory E-Planning Through 3 Project Proposals",
       "event": "Webinar 3D et geospatial",
-      "location": "Online 🌐", 
+      "location": "Online 🌐",
       "date": "2021"
     },
     {
       "type": "Panel Expert",
-      "invited":true,
+      "invited": true,
       "title": "3D Public Participatory GIS",
       "event": "GAtES Project - Final Conference",
-      "location": "Online 🌐", 
+      "location": "Online 🌐",
       "date": "2021"
     },
     {
       "type": "Poster session",
-      "invited":false,
+      "invited": false,
       "title": "Action-research: Assessment of using a 3D participatory platform for reviewing a Swiss city urban development plan",
       "event": "ECSA Conference",
-      "location": "Online 🌐", 
+      "location": "Online 🌐",
       "date": "2020"
     },
     {
       "type": "Conference Presentation",
-      "invited":false,
+      "invited": false,
       "title": "Building a Crowdsourcing-based Disabled Pedestrian Level of Service routing application using Computer Vision and Machine Learning",
       "event": "IEEE Consumer Communications & Networking Conference, 4th IEEE Workshop on Accessible Devices and Services (ADS)",
-      "location": "Las Vegas, USA 🇺🇸", 
+      "location": "Las Vegas, USA 🇺🇸",
       "date": "2019"
     },
     {
       "type": "Conference Presentation",
-      "invited":true,
+      "invited": true,
       "title": "Création automatique et utilisation de bâtiments 3D pour l'aide à la décision",
       "event": "Journée de formation continue geosuisse, 7e Veille technologique en géomatique",
-      "location": "Yverdon-les-Bains, Switzerland 🇨🇭", 
+      "location": "Yverdon-les-Bains, Switzerland 🇨🇭",
       "date": "2019"
     },
     {
       "type": "Conference Presentation",
-      "invited":false,
+      "invited": false,
       "title": "Challenges in creating a 3D participatory platform for urban development",
       "event": "International Cartographic Conference (ICC)",
-      "location": "Tokyo, Japan 🇯🇵", 
+      "location": "Tokyo, Japan 🇯🇵",
       "date": "2019"
     },
     {
       "type": "Conference Presentation",
-      "invited":false,
+      "invited": false,
       "title": "Towards the use of a 3D virtual globe to support public participatory decision making",
       "event": "21th AGILE Conference on Geographic Information Science",
-      "location": "Lund, Sweden 🇸🇪", 
+      "location": "Lund, Sweden 🇸🇪",
       "date": "2018"
     },
     {
       "type": "Conference Presentation",
-      "invited":false,
+      "invited": false,
       "title": "Towards an open 3D participatory citizen debate: Insights on designing a public engagement platform",
       "event": "5th Open Source Geospatial Research and Education (OGRS 2018) Symposium",
-      "location": "Lugano, Switzerland 🇨🇭", 
+      "location": "Lugano, Switzerland 🇨🇭",
       "date": "2018"
     },
     {
       "type": "Conference Presentation",
-      "invited":true,
+      "invited": true,
       "title": "Utilisation de maquettes 3D pour la participation",
       "event": "Journée Romande de la GeoInformation, Utilisation de maquettes 3D pour la participation",
-      "location": "Lausanne, Switzerland 🇨🇭", 
+      "location": "Lausanne, Switzerland 🇨🇭",
       "date": "2018"
     },
     {
       "type": "Conference Presentation",
-      "invited":false,
+      "invited": false,
       "title": "Automated reconstruction of 3D buildings in historic city centers from LIDAR data and 2D building footprints",
       "event": "3D GeoInfo Conference",
-      "location": "Delft, Netherlands 🇳🇱", 
+      "location": "Delft, Netherlands 🇳🇱",
       "date": "2018"
     },
     {
       "type": "Demonstration",
-      "invited":false,
+      "invited": false,
       "title": "Vector Tiles WorkingGroup Results (shared with the team)",
       "event": "OGC Testbed Demonstrations Event",
-      "location": "Washington, USA 🇺🇸", 
+      "location": "Washington, USA 🇺🇸",
       "date": "2017"
     }
   ]

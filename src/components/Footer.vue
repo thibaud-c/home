@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 
 const currentYear = new Date().getFullYear();
 const socialLinks = ref([

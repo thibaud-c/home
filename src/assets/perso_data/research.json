@@ -3,17 +3,17 @@
   "colorAccent": "#E7A454",
   "projects": [
     {
-      "name": "Seed-stage concept...",
-      "dateStart": null,
-      "dateEnd": null,
-      "funding": null,
-      "goal": null
+      "name": "PRE-EMOT",
+      "dateStart": "2025",
+      "dateEnd": "2025",
+      "funding": "ERC – Get Started! Funded by the State of Styria",
+      "goal": "Support to develop a proposal for a ERC Starting Grant on the topic of Emotionally Aware Urban Digital Twins"
     },
     {
       "name": "Applied 3D PPGIS in e-participatory planning",
       "dateStart": "2019",
       "dateEnd": "2022",
-      "funding": "Funded by host institution: HEIG-VD",
+      "funding": "Funded by HEIG-VD (host institution)",
       "goal": "Explored the use of 3D Public Participation GIS (PPGIS) tools in real-world urban development processes to assess their impact on citizen engagement and institutional decision-making. The research introduced a new evaluation framework and design recommendations to enhance participation through customisation and affordances in interactive 3D environments."
     },
     {
@@ -27,7 +27,7 @@
       "name": "OGC Innovation Program (TestBed)",
       "dateStart": "2017",
       "dateEnd": "2018",
-      "funding": "Funded by host institution: HEIG-VD",
+      "funding": "Funded by HEIG-VD (host institution)",
       "goal": "Contributed to the development of a draft open standard for vector tiling and proposed portrayal ontologies to support richer map symbolisation."
     }
   ],
@@ -38,7 +38,7 @@
     "Virtual Geographic Environments (VGEs)",
     "Public Participatory GIS (PPGIS)",
     "Urban Planning",
-    "3D Visualization",
-    "Spatial Decision Support Systems"
+    "Digital Twin",
+    "Emerging Technologies"
   ]
 }

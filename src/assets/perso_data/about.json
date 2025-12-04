@@ -8,21 +8,21 @@
   "question&answer": [
     {
       "question": "What is my research interest?",
-      "answer": "Public Participatory Geographic Information Systems (PPGIS), 3D, Human-Computer Interaction, Spatial Data Science & Visualization, Emerging Technologies, Digital Twin, and Urban Participatory Planning."
+      "answer": "Public Participatory Geographic Information Systems (PPGIS), Civic-Technologies, Virtual Geographic Environement (3D), Human-Computer Interaction, Spatial Data Science & Visualization, Emerging Technologies, Digital Twin, and Urban Participatory Planning."
     },
     {
-      "question": "What are cool stuff I use?",
-      "answer": "Kepler, DuckDB, PostGIS, Lonboard, Vue.js, Cessium.js, and more."
-    },
-    {
-      "question":"My Favorite Programming Language?",
+      "question": "My Favorite Programming Language?",
       "answer": "JS, Python, and SQL."
     },
     {
-      "question":"What is my productivity stack?",
-      "answer": "Raycast, Arc, ClickUp, Perplexity, VSCode, JupyterLab, and Git." 
+      "question": "What are the cool libraries I use?",
+      "answer": "DuckDB, KeplerGL, PostGIS, Lonboard, Vue.js, Cesium.js, and more.."
+    },
+    {
+      "question": "What is my productivity stack?",
+      "answer": "Raycast, Arc, Capacities, ClickUp, Perplexity, VSCode, Windsurf, Docker, JupyterLab, and Git."
     }
   ],
   "cvUrl": "Tibo_cv.pdf",
-  "email":"thibaud.chassin@uni-graz.at"
+  "email": "thibaud.chassin@uni-graz.at"
 }

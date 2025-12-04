@@ -1,5 +1,5 @@
 <template>
-    <nav class="fixed top-0 left-0 right-0 z-40 py-4" :style="{ backgroundColor: isDark ? '#2d2d2d' : '#f5f5f5' }">
+    <nav class="fixed top-0 left-0 right-0 z-40 py-4 transition-all duration-300 bg-navbg/80 backdrop-blur-md border-b border-border/10">
       <div class="container mx-auto px-4 flex justify-between items-center">
         <!-- Desktop Navigation -->
         <ul class="hidden md:flex space-x-6 justify-start">
@@ -8,7 +8,8 @@
           <li><a href="#research" @click.prevent="scrollToSection('research')" class="hover:text-blue-600 dark:hover:text-blue-400">Research</a></li>
           <li><a href="#publications" @click.prevent="scrollToSection('publications')" class="hover:text-blue-600 dark:hover:text-blue-400">Publications</a></li>
           <li><a href="#talks" @click.prevent="scrollToSection('talks')" class="hover:text-blue-600 dark:hover:text-blue-400">Talks</a></li>
-          <li><a href="#teaching" @click.prevent="scrollToSection('teaching')" class="hover:text-blue-600 dark:hover:text-blue-400">Teaching & Supervision</a></li>
+          <li><a href="#teaching" @click.prevent="scrollToSection('teaching')" class="hover:text-blue-600 dark:hover:text-blue-400">Teaching</a></li>
+          <li><a href="#supervision" @click.prevent="scrollToSection('supervision')" class="hover:text-blue-600 dark:hover:text-blue-400">Supervision</a></li>
         </ul>
         
         <!-- Mobile Hamburger Button -->
@@ -45,8 +46,7 @@
       <!-- Mobile Menu (Slide Down) -->
       <div 
         v-if="isMenuOpen" 
-        class="md:hidden absolute top-full left-0 right-0 shadow-md transition-all duration-300 ease-in-out"
-        :style="{ backgroundColor: isDark ? '#2d2d2d' : '#f5f5f5' }"
+        class="md:hidden absolute top-full left-0 right-0 shadow-md transition-all duration-300 ease-in-out bg-navbg/95 backdrop-blur-md border-b border-border/10"
       >
         <ul class="py-2 px-4 space-y-3">
           <li v-for="item in menuItems" :key="item.id">
@@ -77,7 +77,8 @@ const menuItems = [
   { id: 'research', label: 'Research' },
   { id: 'publications', label: 'Publications' },
   { id: 'talks', label: 'Talks' },
-  { id: 'teaching', label: 'Teaching' }
+  { id: 'teaching', label: 'Teaching' },
+  { id: 'supervision', label: 'Supervision' }
 ];
 
 // Get accent color from profile data if available
@@ -110,7 +111,29 @@ const navigateAndCloseMenu = (sectionId) => {
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId);
   if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
+    const headerOffset = 80;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  } else {
+    // Retry once after a short delay in case of rendering
+    setTimeout(() => {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        const headerOffset = 80;
+        const elementPosition = el.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    }, 300);
   }
 };
 
@@ -119,17 +142,7 @@ const toggleDarkMode = () => {
   isDark.value = !isDark.value;
   document.documentElement.classList.toggle('dark', isDark.value);
   
-  // Apply the correct background colors using CSS variables
-  const bgColor = isDark.value ? '#2d2d2d' : '#f5f5f5';
-  const textColor = isDark.value ? '#e0e0e0' : '#3a3a3a';
-  
-  document.documentElement.style.setProperty('--bg-color', bgColor);
-  document.documentElement.style.setProperty('--text-color', textColor);
-  document.body.style.backgroundColor = bgColor;
-  document.body.style.color = textColor;
-  
   localStorage.setItem('darkMode', isDark.value ? 'true' : 'false');
-
 };
 
 // Close mobile menu when clicking outside
@@ -149,15 +162,6 @@ onMounted(() => {
   // Set initial mode based on saved preference or system preference
   isDark.value = savedMode === 'true' || (savedMode === null && prefersDark);
   document.documentElement.classList.toggle('dark', isDark.value);
-  
-  // Apply the correct background colors on initial load
-  const bgColor = isDark.value ? '#2d2d2d' : '#f5f5f5';
-  const textColor = isDark.value ? '#e0e0e0' : '#3a3a3a';
-  
-  document.documentElement.style.setProperty('--bg-color', bgColor);
-  document.documentElement.style.setProperty('--text-color', textColor);
-  document.body.style.backgroundColor = bgColor;
-  document.body.style.color = textColor;
   
   // Close menu when window is resized to desktop size
   window.addEventListener('resize', handleResize);

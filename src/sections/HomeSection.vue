@@ -3,6 +3,7 @@ import { onMounted, onUnmounted } from 'vue';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { useSectionData } from '../composables/useSectionData';
+import earthTexture from '../assets/earth-light.jpg';
 
 // Default profile data
 const defaultData = {
@@ -16,7 +17,7 @@ const defaultData = {
 
 // Use the composable to load section data
 const { data: profileData, loading, error } = useSectionData('home', defaultData);
-console.log(profileData.value);
+
 // Three.js variables
 let scene, camera, renderer, globe, controls;
 let animationFrameId = null;
@@ -97,9 +98,9 @@ const initGlobe = () => {
   const textureLoader = new THREE.TextureLoader();
   
   // Import the texture directly to ensure it's included in the build
-  const earthTextureUrl = './src/assets/earth-light.jpg';
+  const earthTextureUrl = earthTexture;
   
-  console.log(`Attempting to load texture from imported asset: ${earthTextureUrl}`);
+
   
   // Try to load the texture with the correct path
   textureLoader.load(earthTextureUrl, 
@@ -107,11 +108,9 @@ const initGlobe = () => {
       // If texture loads successfully, replace the basic globe
       scene.remove(globe);
       createGlobeWithTexture(texture);
-      console.log('Loaded texture successfully');
+
     },
-    (progressEvent) => {
-      console.log(`Loading texture progress: ${progressEvent}`);
-    },
+    undefined,
     (error) => {
       console.error('Failed to load texture:', error);
       // Fallback to relative path
@@ -119,7 +118,7 @@ const initGlobe = () => {
         (texture) => {
           scene.remove(globe);
           createGlobeWithTexture(texture);
-          console.log('Loaded texture from fallback path');
+
         },
         undefined,
         (fallbackError) => {
@@ -154,7 +153,7 @@ const initGlobe = () => {
     // Remove the call to addAustriaPin()
     
     scene.add(globe);
-    console.log('Globe created with texture');
+
   }
   
   // Function to create feedback emojis
@@ -311,7 +310,7 @@ const initGlobe = () => {
     
     globe = new THREE.Mesh(geometry, material);
     scene.add(globe);
-    console.log('Basic globe created');
+
   }
   
   // Removed unused Austria pin function
@@ -361,7 +360,7 @@ onUnmounted(() => {
     <div class="relative z-20 w-1/2 py-12 px-8 ml-8 flex flex-col justify-center h-screen pt-20">
       <div v-if="loading" class="loading">Loading...</div>
       <div v-else-if="error" class="error">{{ error }}</div>
-      <div v-else class="profile-content">
+      <div v-else class="profile-content animate-fade-in">
         <h1 class="text-3xl md:text-4xl font-light mb-3 tracking-wide" :style="{ color: profileData.colorAccent }">
           {{ profileData.name }}
         </h1>

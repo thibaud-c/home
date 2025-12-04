@@ -1,5 +1,8 @@
 import { ref, onMounted } from 'vue';
 
+// Load all JSON files from the data directory using Vite's glob import
+const dataFiles = import.meta.glob('../assets/perso_data/*.json');
+
 /**
  * Composable for fetching section data from JSON files
  * @param {string} sectionName - The name of the section to fetch data for
@@ -13,41 +16,20 @@ export function useSectionData(sectionName, defaultData = {}, processData = null
 
   onMounted(async () => {
     try {
-      // Try multiple path patterns to find the JSON file
-      const paths = [
-        `./assets/perso_data/${sectionName}.json`,  // Production build path
-        `./src/assets/perso_data/${sectionName}.json`  // Development path
-      ];
-      
-      let jsonData = null;
-      let loaded = false;
-      
-      // Try each path until one works
-      for (const path of paths) {
-        try {
-          const response = await fetch(path);
-          if (response.ok) {
-            jsonData = await response.json();
-            console.log(`Successfully loaded ${sectionName} data from ${path}:`, jsonData);
-            loaded = true;
-            break;
-          }
-        } catch (pathErr) {
-          console.warn(`Failed to load from ${path}:`, pathErr.message);
-          // Continue to next path
-        }
+      const path = `../assets/perso_data/${sectionName}.json`;
+      const loader = dataFiles[path];
+
+      if (!loader) {
+        throw new Error(`Data file for section "${sectionName}" not found.`);
       }
-      
-      if (!loaded) {
-        throw new Error(`Could not load ${sectionName} data from any path`);
-      }
-      
-      // Process the data if needed and ensure we have the required properties
+
+      const module = await loader();
+      const jsonData = module.default;
+
       if (processData) {
         processData(jsonData);
       }
-      
-      // Merge with default data to ensure required properties exist
+
       data.value = { ...defaultData, ...jsonData };
     } catch (err) {
       console.error(`Error loading ${sectionName} data:`, err);

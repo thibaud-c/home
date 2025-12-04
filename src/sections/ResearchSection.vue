@@ -1,5 +1,6 @@
 <script setup>
 import { useSectionData } from '../composables/useSectionData';
+import FadeIn from '../components/FadeIn.vue';
 
 const props = defineProps({
   profile: {
@@ -28,22 +29,34 @@ const { data: researchData, loading, error } = useSectionData('research', defaul
     <div v-else-if="error" class="error">{{ error }}</div>
     <div v-else class="research-content">
       <!-- Research Projects -->
-      <div v-if="researchData.projects && researchData.projects.length > 0" class="research-projects mb-10">
-        <div v-for="(project, index) in researchData.projects" :key="index" class="project-item mb-8">
-          <div class="project-header flex flex-wrap items-baseline justify-between mb-2">
-            <h3 class="text-lg font-normal">{{ project.name }}</h3>
-            <span class="project-dates text-sm font-light opacity-70">
-              {{ project.dateStart }} – {{ project.dateEnd || 'Present' }}
-            </span>
-          </div>
-          
-          <div class="project-funding text-sm font-light opacity-80 mb-2">
-            <span class="funding-label">Funding:</span> {{ project.funding }}
-          </div>
-          
-          <p class="project-goal text-base font-light opacity-80 leading-relaxed">
-            {{ project.goal }}
-          </p>
+      <div v-if="researchData.projects && researchData.projects.length > 0" class="projects-list">
+        <div v-for="(project, index) in researchData.projects" :key="index" class="project-item mb-12 p-4 -ml-4 rounded-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-border/30 hover:bg-card/50 dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-md">
+          <FadeIn :delay="index * 100">
+            <div>
+              <div class="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
+                <h3 class="text-xl font-normal">{{ project.name }}</h3>
+                <span class="text-sm font-light opacity-60">
+                  {{ project.dateStart }} - {{ project.dateEnd || 'Present' }}
+                </span>
+              </div>
+              
+              <p v-if="project.funding" class="text-sm font-light opacity-70 mb-3 italic">
+                {{ project.funding }}
+              </p>
+              
+              <p class="text-base font-light leading-relaxed opacity-90 mb-4">
+                {{ project.goal }}
+              </p>
+              
+              <div v-if="project.tags && project.tags.length > 0" class="flex flex-wrap gap-2 mt-2">
+                <span v-for="(tag, tIndex) in project.tags" :key="tIndex" 
+                      class="text-xs px-2 py-1 rounded border border-opacity-20"
+                      :style="{ borderColor: researchData.colorAccent, color: researchData.colorAccent }">
+                  {{ tag }}
+                </span>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </div>
       

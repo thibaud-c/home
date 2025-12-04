@@ -1,0 +1,40 @@
+{
+  "title": "Supervision",
+  "colorAccent": "#9b59b6",
+  "PhD Theses": [
+    {
+      "title": "From Mapping to Meaning: AI and Gamification for Engaging Public Participation GIS",
+      "student": "Lydia Valdesera",
+      "ongoing": true
+    }
+  ],
+  "Master Theses": [
+    {
+      "title": "Out of Sight, Out of Mind: A Visibility-Based Classification for Identifying Suitable Agricultural Land for Vertical Agri-Photovoltaic Systems",
+      "student": "Karina Löffler",
+      "ongoing": true
+    },
+    {
+      "title": "Colouring Austria: Integrating AI-Derived Roof Typologies into an Open Building-Data Platform",
+      "student": "Simon Herz",
+      "ongoing": true
+    },
+    {
+      "title": "Estimating Urban Pedestrian Volume through Multi-Source Free/Open-Data Fusion",
+      "student": "Benjamin Signitzer",
+      "ongoing": true
+    },
+    {
+      "title": "Opportunities and Challenges of Augmented Reality in Tourism: A Case Study of a Native App for Graz",
+      "student": "Jasmin Sailer",
+      "ongoing": true
+    }
+  ],
+  "Bachelor Theses": [
+    {
+      "title": "Creating an Interactive Story Map of Women’s Football Development in Austria",
+      "student": "Jana Stadlmann",
+      "ongoing": true
+    }
+  ]
+}

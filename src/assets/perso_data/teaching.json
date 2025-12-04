@@ -1,52 +1,65 @@
 {
-  "title": "Teaching & Supervision",
+  "title": "Teaching",
   "colorAccent": "#CCCBB7",
   "philosophy": "Dedicated to empowering the next generation of geospatial experts. My approach fosters critical thinking, hands-on skills, and an understanding of how GIS and digital geographies can be ethically applied to address pressing societal challenges. I aim to create an inclusive and interactive learning environment.",
   "courses": [
     {
-      "code": "402.424", 
+      "code": "402.424",
       "title": "Selected Topics in GIS",
       "level": "Bachelor",
       "institution": "University of Graz",
       "description": "Solutions to spatial problems with modern GIS-based approaches.",
       "syllabusUrl": "https://github.com/thibaud-c/Graz_402.424",
-      "semestersTaught": ["2025"]
+      "semestersTaught": [
+        "2025"
+      ]
     },
     {
-      "code": "402.122", 
+      "code": "402.122",
       "title": "GIS Fundamentals (101)",
       "level": "Bachelor",
       "institution": "University of Graz",
       "description": "Introduction to GIS & GISc",
       "syllabusUrl": null,
-      "semestersTaught": ["2025"]
+      "semestersTaught": [
+        "2025"
+      ]
     },
     {
-      "code": "402.407", 
+      "code": "GST.200UB",
       "title": "Advanced GIS Analysis",
       "level": "Master",
       "institution": "University of Graz",
       "description": "In-depth exploration of advanced geospatial analysis techniques using modern GIS tools.",
       "syllabusUrl": "https://github.com/thibaud-c/GST.200UB",
-      "semestersTaught": ["2024"]
+      "semestersTaught": [
+        "2024",
+        "2025"
+      ]
     },
     {
-      "code": "GST.200UB", 
+      "code": "402.407",
       "title": "Introduction to GIS and digital geographies",
       "level": "Bachelor",
       "institution": "University of Graz",
       "description": "Introduces the foundational concepts of GIS and digital geographies using webGIS.",
-      "syllabusUrl": null,
-      "semestersTaught": ["2024"]
+      "syllabusUrl": "https://github.com/thibaud-c/Graz_402.407",
+      "semestersTaught": [
+        "2024",
+        "2025"
+      ]
     },
     {
-      "code": "GIO1", 
+      "code": "GIO1",
       "title": "Géoinformatique opérationnelle : Développement avancé d'outils",
       "level": "Master",
       "institution": "HEIG-VD",
       "description": "Discovering concepts and tools to organize the front-end side of a web application and enrich the user interface/experience according to current good practices.",
-      "syllabusUrl": "https://github.com/Tazaf/heig-mdt-gio1", 
-      "semestersTaught": ["2020", "2021"]
+      "syllabusUrl": "https://github.com/Tazaf/heig-mdt-gio1",
+      "semestersTaught": [
+        "2020",
+        "2021"
+      ]
     }
   ]
 }

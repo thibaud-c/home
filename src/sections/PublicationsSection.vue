@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useSectionData } from '../composables/useSectionData';
+import FadeIn from '../components/FadeIn.vue';
 
 const props = defineProps({
   profile: {
@@ -66,38 +67,34 @@ const { data: publicationsData, loading, error } = useSectionData('publications'
         
         <!-- List layout for publications -->
         <div class="publications-list">
-          <div v-for="pub in publicationsByYear[year]" :key="pub.tempId" class="publication-item mb-6">
-            <h4 class="text-base font-normal mb-1">{{ pub.title }}</h4>
-            
-            <p class="text-sm font-light opacity-70 mb-1">{{ pub.authors }}</p>
-            
-            <div class="flex items-center gap-3 text-xs font-light opacity-60 mb-2">
-              <span>{{ pub.type }}</span>
-              <span v-if="pub.journal" class="publication-journal">
-                {{ pub.journal }} {{ pub.volume }}{{ pub.issue ? '(' + pub.issue + ')' : '' }}
-              </span>
-            </div>
-            
-            <div class="flex flex-wrap items-center gap-4 mt-2">
-              <a v-if="pub.doi" :href="`https://doi.org/${pub.doi}`" target="_blank" 
-                 class="publication-link text-xs flex items-center gap-1"
-                 :style="{ color: publicationsData.colorAccent }">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                <span>Full Publication</span>
-              </a>
-              
-              <div class="flex flex-wrap gap-2">
-                <span v-for="tag in pub.tags" :key="tag.name" 
-                      class="tag-item text-xs"
-                      :style="{ color: tag.color || publicationsData.colorAccent }">
-                  {{ tag.name }}
-                </span>
+          <div v-for="(pub, index) in publicationsByYear[year]" :key="pub.tempId" class="publication-item mb-6 p-4 rounded-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-border/30 hover:bg-card/50 dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-lg">
+            <FadeIn :delay="index * 50">
+              <div>
+                <h4 class="text-base font-normal mb-1">{{ pub.title }}</h4>
+                
+                <p class="text-sm font-light opacity-70 mb-1">{{ pub.authors }}</p>
+                
+                <div class="flex flex-wrap gap-x-3 gap-y-1 text-xs font-light opacity-60 mb-2">
+                  <span v-if="pub.journal" class="italic">{{ pub.journal }}</span>
+                  <span v-if="pub.event">{{ pub.event }}</span>
+                  <span v-if="pub.venue">{{ pub.venue }}</span>
+                  <span v-if="pub.volume">Vol. {{ pub.volume }}</span>
+                  <span v-if="pub.issue">Issue {{ pub.issue }}</span>
+                </div>
+                
+                <div class="flex flex-wrap items-center gap-2 mt-2">
+                  <span v-for="tag in pub.tags" :key="tag.name" 
+                        class="tag-item text-xs"
+                        :style="{ color: tag.color || publicationsData.colorAccent }">
+                    {{ tag.name }}
+                  </span>
+                  
+                  <a v-if="pub.doi" :href="'https://doi.org/' + pub.doi" target="_blank" class="text-xs border border-current px-2 py-0.5 rounded opacity-50 hover:opacity-100 transition-opacity" :style="{ color: publicationsData.colorAccent }">
+                    DOI
+                  </a>
+                </div>
               </div>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </div>
@@ -126,17 +123,18 @@ const { data: publicationsData, loading, error } = useSectionData('publications'
 
 .publication-item {
   position: relative;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .publication-item::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: -1px;
   top: 0.5rem;
-  bottom: 0.5rem;
-  width: 1px;
-  background-color: rgba(0, 0, 0, 0.1);
+  width: 2px;
+  height: 1rem;
+  background-color: v-bind('publicationsData.colorAccent');
 }
 
 .publication-journal {

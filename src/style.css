@@ -6,7 +6,8 @@
   :root {
     --background: 0 0% 98%;
     --foreground: 222.2 30% 20%;
-    --nav-bg: 222 84% 5%; /* Dark color for navigation */
+    --nav-bg: 0 0% 100%;
+    /* White for light mode */
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -39,7 +40,8 @@
   .dark {
     --background: 222.2 20% 15%;
     --foreground: 210 15% 90%;
-    --nav-bg: 222 84% 5%; /* Same dark color in dark mode */
+    --nav-bg: 222 84% 5%;
+    /* Same dark color in dark mode */
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -72,8 +74,111 @@
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground;
-    font-family: 'IBM Plex Mono', monospace;
+    @apply text-foreground font-sans;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(106, 193, 200, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(233, 121, 167, 0.12) 0%, transparent 40%),
+      radial-gradient(ellipse at 40% 60%, rgba(99, 155, 61, 0.10) 0%, transparent 50%),
+      radial-gradient(ellipse at 90% 80%, rgba(204, 203, 183, 0.12) 0%, transparent 40%),
+      hsl(var(--background));
+    background-attachment: fixed;
+    min-height: 100vh;
   }
+
+  .dark body {
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(106, 193, 200, 0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(233, 121, 167, 0.08) 0%, transparent 40%),
+      radial-gradient(ellipse at 40% 60%, rgba(99, 155, 61, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 90% 80%, rgba(204, 203, 183, 0.10) 0%, transparent 40%),
+      hsl(var(--background));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-mono;
+  }
+}
+
+/* Decorative floating shapes */
+.decorative-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.decorative-shapes::before,
+.decorative-shapes::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.08;
+  animation: float 20s ease-in-out infinite;
+}
+
+.decorative-shapes::before {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, #6AC1C8, #E979A7);
+  top: -150px;
+  right: -150px;
+  animation-delay: 0s;
+}
+
+.decorative-shapes::after {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #639B3D, #CCCBB7);
+  bottom: 20%;
+  left: -120px;
+  animation-delay: -10s;
+}
+
+.dark .decorative-shapes::before,
+.dark .decorative-shapes::after {
+  opacity: 0.05;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+/* Subtle grid pattern overlay */
+.grid-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.dark .grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 }

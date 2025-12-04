@@ -1,5 +1,7 @@
 <script setup>
 import { useSectionData } from '../composables/useSectionData';
+import cvFile from '../assets/Tibo_cv.pdf';
+import FadeIn from '../components/FadeIn.vue';
 
 const props = defineProps({
   profile: {
@@ -32,65 +34,73 @@ const { data: personalInfo, loading, error } = useSectionData('about', defaultDa
     <div v-else-if="error" class="error">{{ error }}</div>
     <div v-else class="about-content">
       <!-- Affiliation - simplified with link -->
-      <div class="mb-8">
-        <p class="text-base font-light mb-2 question-style">
-          My Current Affiliation?
-        </p>
-        <p class="text-base font-light opacity-80">
-          {{ personalInfo.workingGroup }}, 
-          {{ personalInfo.institute }}, 
-          <a v-if="personalInfo.universityUrl" 
-             :href="personalInfo.universityUrl" 
-             target="_blank" 
-             class="transition-all hover:opacity-100"
-             :style="{ 
-               color: personalInfo.colorAccent,
-               opacity: '0.9',
-               borderBottom: '1px solid ' + personalInfo.colorAccent + '30'
-             }">
-            {{ personalInfo.university }}
-          </a>
-          <span v-else>{{ personalInfo.university }}</span>
-        </p>
-      </div>
+      <FadeIn :delay="100">
+        <div class="mb-8">
+          <p class="text-base font-light mb-2 question-style">
+            My Current Affiliation?
+          </p>
+          <p class="text-base font-light opacity-80">
+            {{ personalInfo.workingGroup }}, 
+            {{ personalInfo.institute }}, 
+            <a v-if="personalInfo.universityUrl" 
+               :href="personalInfo.universityUrl" 
+               target="_blank" 
+               class="transition-all hover:opacity-100"
+               :style="{ 
+                 color: personalInfo.colorAccent,
+                 opacity: '0.9',
+                 borderBottom: '1px solid ' + personalInfo.colorAccent + '30'
+               }">
+              {{ personalInfo.university }}
+            </a>
+            <span v-else>{{ personalInfo.university }}</span>
+          </p>
+        </div>
+      </FadeIn>
       
       <!-- Q&A Section -->
       <div v-if="personalInfo['question&answer'] && personalInfo['question&answer'].length > 0" class="mb-8">
         <div v-for="(qa, index) in personalInfo['question&answer']" :key="index" class="mb-6">
-          <p class="text-base font-light mb-1 question-style">
-            {{ qa.question }}
-          </p>
-          <p class="text-base font-light opacity-80 ml-0">
-            {{ qa.answer }}
-          </p>
+          <FadeIn :delay="200 + (index * 100)">
+            <div>
+              <p class="text-base font-light mb-1 question-style">
+                {{ qa.question }}
+              </p>
+              <p class="text-base font-light opacity-80 ml-0">
+                {{ qa.answer }}
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </div>
       
       <!-- Contact & CV -->
-      <div class="mt-10 flex flex-wrap gap-6">
-        <a v-if="personalInfo.email" 
-           :href="'mailto:' + personalInfo.email" 
-           class="inline-block py-2 transition-all hover:opacity-100"
-           :style="{ 
-             color: personalInfo.colorAccent,
-             opacity: '0.8',
-             borderBottom: '1px solid ' + personalInfo.colorAccent + '50'
-           }">
-          Contact
-        </a>
-        
-        <a v-if="personalInfo.cvUrl" 
-           :href="personalInfo.cvUrl" 
-           target="_blank"
-           class="inline-block py-2 transition-all hover:opacity-100"
-           :style="{ 
-             color: personalInfo.colorAccent,
-             opacity: '0.8',
-             borderBottom: '1px solid ' + personalInfo.colorAccent + '50'
-           }">
-          Download CV
-        </a>
-      </div>
+      <FadeIn :delay="600">
+        <div class="mt-10 flex flex-wrap gap-6">
+          <a v-if="personalInfo.email" 
+             :href="'mailto:' + personalInfo.email" 
+             class="inline-block py-2 transition-all hover:opacity-100"
+             :style="{ 
+               color: personalInfo.colorAccent,
+               opacity: '0.8',
+               borderBottom: '1px solid ' + personalInfo.colorAccent + '50'
+             }">
+            Contact
+          </a>
+          
+          <a v-if="personalInfo.cvUrl" 
+             :href="cvFile" 
+             target="_blank"
+             class="inline-block py-2 transition-all hover:opacity-100"
+             :style="{ 
+               color: personalInfo.colorAccent,
+               opacity: '0.8',
+               borderBottom: '1px solid ' + personalInfo.colorAccent + '50'
+             }">
+            Download CV
+          </a>
+        </div>
+      </FadeIn>
     </div>
   </div>
 </template>

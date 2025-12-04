@@ -7,6 +7,7 @@ import ResearchSection from '../sections/ResearchSection.vue'
 import PublicationsSection from '../sections/PublicationsSection.vue'
 import TalksSection from '../sections/TalksSection.vue'
 import TeachingSection from '../sections/TeachingSection.vue'
+import SupervisionSection from '../sections/SupervisionSection.vue'
 import Navigation from '../components/Navigation.vue'
 import FooterSection from '../components/Footer.vue'
 
@@ -48,6 +49,10 @@ const scrollToSection = (sectionId) => {
       
       <section id="teaching" class="min-h-screen py-16">
         <TeachingSection />
+      </section>
+
+      <section id="supervision" class="min-h-screen py-16">
+        <SupervisionSection />
       </section>
     </div>
     

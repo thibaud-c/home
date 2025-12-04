@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useSectionData } from '../composables/useSectionData';
+import FadeIn from '../components/FadeIn.vue';
 
 const props = defineProps({
   profile: {
@@ -67,23 +68,27 @@ const { data: talksData, loading, error } = useSectionData('talks', defaultData,
         
         <!-- List layout for talks -->
         <div class="talks-list">
-          <div v-for="talk in talksByYear[year]" :key="talk.tempId" class="talk-item mb-6">
-            <div class="flex items-center gap-2 mb-1">
-              <span class="talk-type text-xs font-light" 
-                    :class="{'invited': talk.invited}"
-                    :style="talk.invited ? { color: talksData.colorAccent } : {}">
-                {{ talk.type }}
-                <span v-if="talk.invited" class="invited-badge ml-1">★</span>
-              </span>
-            </div>
-            
-            <h4 class="text-base font-normal mb-1">{{ talk.title }}</h4>
-            
-            <div class="flex items-center gap-3 text-xs font-light opacity-60 mb-1">
-              <span>{{ talk.event }}</span>
-            </div>
-            
-            <p class="text-xs font-light opacity-50">{{ talk.location }}</p>
+          <div v-for="(talk, index) in talksByYear[year]" :key="talk.tempId" class="talk-item mb-6 p-4 -ml-4 rounded-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-border/30 hover:bg-card/50 dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-md">
+            <FadeIn :delay="index * 50">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="talk-type text-xs font-light" 
+                        :class="{'invited': talk.invited}"
+                        :style="talk.invited ? { color: talksData.colorAccent } : {}">
+                    {{ talk.type }}
+                    <span v-if="talk.invited" class="invited-badge ml-1">★</span>
+                  </span>
+                </div>
+                
+                <h4 class="text-base font-normal mb-1">{{ talk.title }}</h4>
+                
+                <div class="flex items-center gap-3 text-xs font-light opacity-60 mb-1">
+                  <span>{{ talk.event }}</span>
+                </div>
+                
+                <p class="text-xs font-light opacity-50">{{ talk.location }}</p>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </div>
@@ -112,17 +117,18 @@ const { data: talksData, loading, error } = useSectionData('talks', defaultData,
 
 .talk-item {
   position: relative;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .talk-item::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: -1px;
   top: 0.5rem;
-  bottom: 0.5rem;
-  width: 1px;
-  background-color: rgba(0, 0, 0, 0.1);
+  width: 2px;
+  height: 1rem;
+  background-color: v-bind('talksData.colorAccent');
 }
 
 .talk-type {

@@ -42,5 +42,5 @@ export default defineConfig({
     }
   },
   // Configure asset handling
-  assetsInclude: ['**/*.jpg', '**/*.png', '**/*.svg', '**/*.json']
+  assetsInclude: ['**/*.jpg', '**/*.png', '**/*.svg']
 })

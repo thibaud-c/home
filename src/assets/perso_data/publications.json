@@ -160,6 +160,7 @@
       "volume": "3",
       "pages": "1054252",
       "doi": "10.3389/frvir.2022.1054252",
+      "img": "../assets/illustrations/frvir_2022.png",
       "tags": [
         {
           "name": "PPGIS",
@@ -192,6 +193,7 @@
       "volume": "224",
       "pages": "104432",
       "doi": "10.1016/j.landurbplan.2022.104432",
+      "img": "../assets/illustrations/lup_2022.png",
       "tags": [
         {
           "name": "VGE",
@@ -221,6 +223,7 @@
       "issue": "8",
       "pages": "563",
       "doi": "10.3390/ijgi10080563",
+      "img": "../assets/illustrations/ijgi_2021.png",
       "tags": [
         {
           "name": "Urban Participatory Planning",

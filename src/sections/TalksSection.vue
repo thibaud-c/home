@@ -50,9 +50,10 @@ const { data: talksData, loading, error } = useSectionData('talks', defaultData,
 
 <template>
   <div class="talks-section py-12 px-4">
-    <h2 class="text-2xl font-light mb-8 tracking-wide" :style="{ color: talksData.colorAccent }">
+    <h2 class="text-2xl font-light mb-2 tracking-wide" :style="{ color: talksData.colorAccent }">
       {{ talksData.title }}
     </h2>
+    <p class="text-xs font-light opacity-60 mb-8">★ indicates invited talk/presentation</p>
     
     <div v-if="loading" class="loading">Loading...</div>
     <div v-else-if="error" class="error">{{ error }}</div>

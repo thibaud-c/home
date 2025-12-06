@@ -101,6 +101,7 @@
       "volume": "12",
       "issue": "1",
       "doi": "10.4018/IJEPR.318085",
+      "img": "../assets/illustrations/ijep_2023.png",
       "tags": [
         {
           "name": "Media Analysis",
@@ -252,6 +253,7 @@
       "volume": "4",
       "pages": "19",
       "doi": "10.5194/ica-proc-4-19-2021",
+      "img": "../assets/illustrations/ica_2021.png",
       "tags": [
         {
           "name": "VGE",
@@ -370,6 +372,7 @@
       "volume": "1",
       "pages": "3",
       "doi": "10.5194/ica-adv-1-3-2019",
+      "img": "../assets/illustrations/ica_2019.png",
       "tags": [
         {
           "name": "PPGIS",

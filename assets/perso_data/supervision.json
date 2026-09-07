@@ -1,0 +1,52 @@
+{
+  "title": "Supervision",
+  "colorAccent": "#9b59b6",
+  "PhD Theses": [
+    {
+      "title": "From Mapping to Meaning: AI and Gamification for Public Engagement in GIS",
+      "student": "Christina Lydia Valdesera",
+      "ongoing": true
+    }
+  ],
+  "Master Theses": [
+    {
+      "title": "Out of Sight, Out of Mind: A Visibility-Based Classification for Identifying Suitable Agricultural Land for Vertical Agri-Photovoltaic Systems",
+      "student": "Karina Löffler",
+      "ongoing": false
+    },
+    {
+      "title": "Pioneering Colouring Austria: Developing an Open, Scalable Building Platform and AI-Derived Roof Typologies for Building Data",
+      "student": "Simon Rune Herz",
+      "ongoing": false
+    },
+    {
+      "title": "Pedestrian Hotspot Detection Using Openly Accessible Crowdsourced Street-View Imagery and AI",
+      "student": "Benjamin Michael Signitzer",
+      "ongoing": false
+    },
+    {
+      "title": "Opportunities and Challenges of Augmented Reality in Tourism: A Case Study of a Native App for Graz",
+      "student": "Jasmin Sailer",
+      "ongoing": false
+    },
+    {
+      "title": "Integrating 3-30-300 Indicators into Coloring Cities: A High-Resolution Geospatial Framework for Individual Tree Detection…",
+      "student": "Robin Nicolas Holfelder",
+      "ongoing": true,
+      "titleIncomplete": true
+    },
+    {
+      "title": "Resilience of Urban Mobility Networks: Accessibility of Critical Infrastructure under Flood-Disruption Scenarios – A Case Study…",
+      "student": "Steve Arthur Megaptche",
+      "ongoing": true,
+      "titleIncomplete": true
+    }
+  ],
+  "Bachelor Theses": [
+    {
+      "title": "Creating an Interactive Story Map of Women’s Football Development in Austria",
+      "student": "Jana Stadlmann",
+      "ongoing": false
+    }
+  ]
+}

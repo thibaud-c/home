@@ -11,6 +11,8 @@
       "journal": "AGILE: GIScience Series",
       "volume": "7",
       "pages": "45",
+      "event": "AGILE 2026",
+      "location": "Tartu, Estonia",
       "doi": "10.5194/agile-giss-7-45-2026",
       "tags": [
         {
@@ -24,6 +26,26 @@
         {
           "name": "Urban Participatory Planning",
           "color": "#67f3d4"
+        }
+      ]
+    },
+    {
+      "type": "Conference Abstract",
+      "authors": "Berila, A., Chassin, T., and Sulzer, W.:",
+      "year": 2026,
+      "date": "2026-05-03",
+      "title": "Spatial quantification of human–environment coupling using multi-source geospatial data and geospatial analytics: evidence from Prishtina, Kosovo",
+      "event": "EGU2026",
+      "location": "Vienna, Austria",
+      "doi": "10.5194/egusphere-egu26-15419",
+      "tags": [
+        {
+          "name": "Geospatial Analytics",
+          "color": "#67f3d4"
+        },
+        {
+          "name": "Human–Environment Coupling",
+          "color": "#ff70b7"
         }
       ]
     },
@@ -60,6 +82,7 @@
       "title": "Pre-Filled Maps for Proactive e-Participation: A New Paradigm for PPGIS Methodologies",
       "event": "International Cartographic Conference",
       "location": "Vancouver, Canada",
+      "doi": "10.5194/ica-abs-10-266-2025",
       "tags": [
         {
           "name": "PPGIS",

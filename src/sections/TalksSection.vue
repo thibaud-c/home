@@ -10,7 +10,6 @@ const visible = computed(() => (expanded.value ? sorted : sorted.slice(0, 3)));
 <template>
   <div class="section-heading">
     <p class="eyebrow cyan">06 / TALKS</p>
-    <h2>Part of the conversation.</h2>
   </div>
   <article v-for="talk in visible" :key="talk.title" class="talk-row">
     <span class="row-year">{{ talk.date }}</span>

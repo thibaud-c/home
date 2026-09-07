@@ -36,7 +36,6 @@ import AsciiGlobe from "../components/AsciiGlobe.vue";
   </div>
   <div class="hero-strip">
     <span><span class="pink">01 /</span> PEOPLE + PLACES + TECHNOLOGY</span
-    ><span>EXPLORING THE HUMAN SIDE OF SPATIAL DATA</span
     ><a href="#about" aria-label="Scroll to about">SCROLL TO EXPLORE ↓</a>
   </div>
 </template>

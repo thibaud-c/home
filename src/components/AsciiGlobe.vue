@@ -146,8 +146,7 @@ onUnmounted(() => {
 <template>
   <figure class="globe-figure">
     <div class="globe-label">
-      <span class="crosshair">+</span> A SHARED WORLD
-      <span class="muted">/ 3D → ASCII</span>
+      <span class="crosshair">+</span> 
     </div>
     <div class="globe-stage">
       <div class="orbit orbit-one" aria-hidden="true"></div>

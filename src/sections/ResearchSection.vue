@@ -4,11 +4,6 @@ import research from "../assets/perso_data/research.json";
 <template>
   <div class="section-heading">
     <p class="eyebrow cyan">02 / RESEARCH</p>
-    <h2>From spatial data<br />to shared understanding.</h2>
-    <p class="section-intro">
-      Exploring the tools, interfaces and experiences that connect people with
-      their environments.
-    </p>
   </div>
   <div class="project-grid">
     <article

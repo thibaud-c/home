@@ -4,6 +4,17 @@
   "philosophy": "I am dedicated to empowering the next generation of geospatial experts. My approach fosters critical thinking, hands-on skills, and an understanding of how GIS and digital geographies can be ethically applied to address pressing societal challenges. I aim to create an inclusive and interactive learning environment.",
   "courses": [
     {
+      "code": "402.428",
+      "title": "Software Engineering: Spatial Data Science",
+      "level": "Bachelor",
+      "institution": "University of Graz",
+      "description": "Advanced Python-based geospatial programming for urban and environmental analysis, built around reproducible workflows.",
+      "syllabusUrl": "https://github.com/thibaud-c/Graz_402.428",
+      "semestersTaught": [
+        "2026"
+      ]
+    },
+    {
       "code": "402.424",
       "title": "Selected Topics in GIS",
       "level": "Bachelor",
@@ -11,7 +22,8 @@
       "description": "Solutions to spatial problems with modern GIS-based approaches.",
       "syllabusUrl": "https://github.com/thibaud-c/Graz_402.424",
       "semestersTaught": [
-        "2025"
+        "2025",
+        "2026"
       ]
     },
     {
@@ -34,7 +46,8 @@
       "syllabusUrl": "https://github.com/thibaud-c/GST.200UB",
       "semestersTaught": [
         "2024",
-        "2025"
+        "2025",
+        "2026"
       ]
     },
     {
@@ -46,7 +59,8 @@
       "syllabusUrl": "https://github.com/thibaud-c/Graz_402.407",
       "semestersTaught": [
         "2024",
-        "2025"
+        "2025",
+        "2026"
       ]
     },
     {

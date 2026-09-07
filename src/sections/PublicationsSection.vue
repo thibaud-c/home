@@ -28,7 +28,6 @@ const illustrations = import.meta.glob("../assets/illustrations/*.png", {
   <div class="section-heading heading-with-link">
     <div>
       <p class="eyebrow pink">03 / PUBLICATIONS</p>
-      <h2>Ideas, in the open.</h2>
     </div>
     <a
       href="https://scholar.google.com/citations?user=rf3WWQgAAAAJ&hl=en"

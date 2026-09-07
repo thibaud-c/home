@@ -5,13 +5,12 @@ import cv from "../assets/Tibo_cv.pdf";
 <template>
   <div class="section-heading">
     <p class="eyebrow pink">01 / ABOUT</p>
-    <h2>Geography is about people, too.</h2>
   </div>
   <div class="about-layout">
     <p class="large-copy">
       I work at the intersection of
       <span class="cyan">geospatial technology</span> and
-      <span class="pink">public participation</span> — making complex places
+      <span class="pink">public participation</span>; making complex places
       easier to understand, discuss and shape together.
     </p>
     <div>

@@ -4,7 +4,6 @@ import teaching from "../assets/perso_data/teaching.json";
 <template>
   <div class="section-heading">
     <p class="eyebrow pink">05 / TEACHING</p>
-    <h2>Learn by mapping.</h2>
     <p class="section-intro">{{ teaching.philosophy }}</p>
   </div>
   <div class="course-list">

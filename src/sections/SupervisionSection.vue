@@ -22,7 +22,6 @@ const ongoing = allTheses.filter((thesis) => thesis.ongoing).length;
   <div class="section-heading heading-with-link">
     <div>
       <p class="eyebrow cyan">04 / SUPERVISION</p>
-      <h2>The next perspectives.</h2>
       <p class="section-intro">
         Supporting students as they find new ways to see, analyse and shape our
         world.

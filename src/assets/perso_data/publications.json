@@ -3,10 +3,35 @@
   "colorAccent": "#639B3D",
   "items": [
     {
+      "type": "Conference Paper",
+      "authors": "Valdesera L., Chassin T., and Pánek J.",
+      "year": 2026,
+      "date": "2026-06-10",
+      "title": "Can Large Language Models interpret participatory mapping comments at scale? Evidence from Prague’s emotional mapping",
+      "journal": "AGILE: GIScience Series",
+      "volume": "7",
+      "pages": "45",
+      "doi": "10.5194/agile-giss-7-45-2026",
+      "tags": [
+        {
+          "name": "Participatory Mapping",
+          "color": "#67f3d4"
+        },
+        {
+          "name": "Large Language Models",
+          "color": "#ff70b7"
+        },
+        {
+          "name": "Urban Participatory Planning",
+          "color": "#67f3d4"
+        }
+      ]
+    },
+    {
       "type": "Conference Abstract",
       "authors": "Herz S., Gandhi S., Keskin M., Chassin T.",
       "year": 2025,
-      "title": "Pioneering Colouring Austria: A Scalable Urban Data Framework for the Digital Twin EraPioneering Colouring Austria: A Scalable Urban Data Framework for the Digital Twin Era",
+      "title": "Pioneering Colouring Austria: A Scalable Urban Data Framework for the Digital Twin Era",
       "event": "ILUS",
       "location": "Dresden, Germany",
       "tags": [

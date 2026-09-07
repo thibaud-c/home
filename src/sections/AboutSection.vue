@@ -1,134 +1,41 @@
 <script setup>
-import { useSectionData } from '../composables/useSectionData';
-import cvFile from '../assets/Tibo_cv.pdf';
-import FadeIn from '../components/FadeIn.vue';
-
-const props = defineProps({
-  profile: {
-    type: Object,
-    default: () => ({})
-  }
-});
-
-const defaultData = {
-  title: "About Me",
-  colorAccent: "#16a085",
-  workingGroup: "",
-  institute: "",
-  university: "",
-  universityUrl: "",
-  "question&answer": []
-};
-
-const { data: personalInfo, loading, error } = useSectionData('about', defaultData);
-
+import about from "../assets/perso_data/about.json";
+import cv from "../assets/Tibo_cv.pdf";
 </script>
-
 <template>
-  <div class="about-section py-12 px-4">
-    <h2 class="text-2xl font-light mb-8 tracking-wide" :style="{ color: personalInfo.colorAccent }">
-      {{ personalInfo.title }}
-    </h2>
-    
-    <div v-if="loading" class="loading">Loading...</div>
-    <div v-else-if="error" class="error">{{ error }}</div>
-    <div v-else class="about-content">
-      <!-- Affiliation - simplified with link -->
-      <FadeIn :delay="100">
-        <div class="mb-8">
-          <p class="text-base font-light mb-2 question-style">
-            My Current Affiliation?
-          </p>
-          <p class="text-base font-light opacity-80">
-            {{ personalInfo.workingGroup }}, 
-            {{ personalInfo.institute }}, 
-            <a v-if="personalInfo.universityUrl" 
-               :href="personalInfo.universityUrl" 
-               target="_blank" 
-               class="transition-all hover:opacity-100"
-               :style="{ 
-                 color: personalInfo.colorAccent,
-                 opacity: '0.9',
-                 borderBottom: '1px solid ' + personalInfo.colorAccent + '30'
-               }">
-              {{ personalInfo.university }}
-            </a>
-            <span v-else>{{ personalInfo.university }}</span>
-          </p>
-        </div>
-      </FadeIn>
-      
-      <!-- Q&A Section -->
-      <div v-if="personalInfo['question&answer'] && personalInfo['question&answer'].length > 0" class="mb-8">
-        <div v-for="(qa, index) in personalInfo['question&answer']" :key="index" class="mb-6">
-          <FadeIn :delay="200 + (index * 100)">
-            <div>
-              <p class="text-base font-light mb-1 question-style">
-                {{ qa.question }}
-              </p>
-              <p class="text-base font-light opacity-80 ml-0">
-                {{ qa.answer }}
-              </p>
-            </div>
-          </FadeIn>
-        </div>
+  <div class="section-heading">
+    <p class="eyebrow pink">01 / ABOUT</p>
+    <h2>Geography is about people, too.</h2>
+  </div>
+  <div class="about-layout">
+    <p class="large-copy">
+      I work at the intersection of
+      <span class="cyan">geospatial technology</span> and
+      <span class="pink">public participation</span> — making complex places
+      easier to understand, discuss and shape together.
+    </p>
+    <div>
+      <p class="muted">{{ about.workingGroup }}<br />{{ about.institute }}</p>
+      <a
+        :href="about.universityUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-link"
+        >{{ about.university }} ↗</a
+      >
+      <div class="about-actions">
+        <a class="button" :href="cv" target="_blank" rel="noopener noreferrer"
+          >Download CV ↗</a
+        ><a class="text-link" :href="`mailto:${about.email}`"
+          >Get in touch ↗</a
+        >
       </div>
-      
-      <!-- Contact & CV -->
-      <FadeIn :delay="600">
-        <div class="mt-10 flex flex-wrap gap-6">
-          <a v-if="personalInfo.email" 
-             :href="'mailto:' + personalInfo.email" 
-             class="inline-block py-2 transition-all hover:opacity-100"
-             :style="{ 
-               color: personalInfo.colorAccent,
-               opacity: '0.8',
-               borderBottom: '1px solid ' + personalInfo.colorAccent + '50'
-             }">
-            Contact
-          </a>
-          
-          <a v-if="personalInfo.cvUrl" 
-             :href="cvFile" 
-             target="_blank"
-             class="inline-block py-2 transition-all hover:opacity-100"
-             :style="{ 
-               color: personalInfo.colorAccent,
-               opacity: '0.8',
-               borderBottom: '1px solid ' + personalInfo.colorAccent + '50'
-             }">
-            Download CV
-          </a>
-        </div>
-      </FadeIn>
     </div>
   </div>
+  <div class="about-details">
+    <details v-for="item in about['question&answer']" :key="item.question">
+      <summary>{{ item.question }}</summary>
+      <p>{{ item.answer }}</p>
+    </details>
+  </div>
 </template>
-
-<style scoped>
-.loading, .error {
-  padding: 0.75rem;
-  font-weight: 300;
-}
-
-.loading {
-  opacity: 0.6;
-}
-
-.error {
-  color: #721c24;
-  opacity: 0.8;
-}
-
-.about-content {
-  line-height: 1.8;
-  letter-spacing: 0.01em;
-}
-
-.question-style {
-  color: rgba(163, 163, 163, 0.8);
-  border-left: 2px solid;
-  padding-left: 8px;
-  border-left-color: v-bind('personalInfo.colorAccent');
-}
-</style>

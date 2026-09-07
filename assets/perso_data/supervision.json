@@ -4,7 +4,7 @@
   "PhD Theses": [
     {
       "title": "From Mapping to Meaning: AI and Gamification for Public Engagement in GIS",
-      "student": "Christina Lydia Valdesera",
+      "student": "Lydia Valdesera",
       "ongoing": true
     }
   ],
@@ -16,12 +16,12 @@
     },
     {
       "title": "Pioneering Colouring Austria: Developing an Open, Scalable Building Platform and AI-Derived Roof Typologies for Building Data",
-      "student": "Simon Rune Herz",
+      "student": "Simon Herz",
       "ongoing": false
     },
     {
       "title": "Pedestrian Hotspot Detection Using Openly Accessible Crowdsourced Street-View Imagery and AI",
-      "student": "Benjamin Michael Signitzer",
+      "student": "Benjamin Signitzer",
       "ongoing": false
     },
     {
@@ -30,16 +30,19 @@
       "ongoing": false
     },
     {
-      "title": "Integrating 3-30-300 Indicators into Coloring Cities: A High-Resolution Geospatial Framework for Individual Tree Detection…",
-      "student": "Robin Nicolas Holfelder",
-      "ongoing": true,
-      "titleIncomplete": true
+      "title": "Integrating 3-30-300 Indicators into Coloring Cities: A High-Resolution Geospatial Framework for Individual Tree Detection and Urban Tree Visibility Assessment in Graz",
+      "student": "Robin Holfelder",
+      "ongoing": true
     },
     {
-      "title": "Resilience of Urban Mobility Networks: Accessibility of Critical Infrastructure under Flood-Disruption Scenarios – A Case Study…",
-      "student": "Steve Arthur Megaptche",
-      "ongoing": true,
-      "titleIncomplete": true
+      "title": "Integrating the 15-minute city concept into Coloring Cities",
+      "student": "Leon Prucker",
+      "ongoing": true
+    },
+    {
+      "title": "Resilience of Urban Mobility Networks: Accessibility of Critical Infrastructure under Flood-Disruption Scenarios – A Case Study of GrazResilience of Urban Mobility Networks: Accessibility of Critical Infrastructure under Flood-Disruption Scenarios – A Case Study of Graz",
+      "student": "Steve Megaptche",
+      "ongoing": true
     }
   ],
   "Bachelor Theses": [

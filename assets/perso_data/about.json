@@ -2,7 +2,7 @@
   "title": "About Me",
   "colorAccent": "#E979A7",
   "workingGroup": "Geospatial Technologies",
-  "institute": "Institute of Geography and Regional Science",
+  "institute": "Department of Geography and Regional Science",
   "university": "University of Graz",
   "universityUrl": "https://geographie.uni-graz.at/en/",
   "question&answer": [
@@ -20,7 +20,7 @@
     },
     {
       "question": "What is my productivity stack?",
-      "answer": "Raycast, Arc, Capacities, ClickUp, Perplexity, VSCode, Windsurf, Docker, JupyterLab, and Git."
+      "answer": "Raycast, Arc, Capacities, Perplexity, VSCode, Devin, Docker, Marimo, and Git."
     }
   ],
   "cvUrl": "Tibo_cv.pdf",

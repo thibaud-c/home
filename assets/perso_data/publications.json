@@ -3,6 +3,37 @@
   "colorAccent": "#639B3D",
   "items": [
     {
+      "type": "Conference Abstract",
+      "authors": "Chassin T., Herz S., Gandhi S., and Keskin M.",
+      "year": 2026,
+      "title": "Early Lessons from Adapting the Colouring Cities Framework for Graz, Austria",
+      "event": "Eurocarto 2026",
+      "location": "Brno, Czech Republic",
+      "doi": "10.5194/ica-abs-12-24-2026",
+      "tags": [
+        {
+          "name": "Building-Level Urban Data",
+          "color": "#1d78c9"
+        },
+        {
+          "name": "Spatial Data Harmonization",
+          "color": "#3abd28"
+        },
+        {
+          "name": "Colouring Cities Research Programme",
+          "color": "#a3e236"
+        },
+        {
+          "name": "Spatial Data Infrastructure (SDI)",
+          "color": "#e06c79"
+        },
+        {
+          "name": "Urban Digital Twins",
+          "color": "#6c6ce0"
+        }
+      ]
+    },
+    {
       "type": "Conference Paper",
       "authors": "Valdesera L., Chassin T., and Pánek J.",
       "year": 2026,
